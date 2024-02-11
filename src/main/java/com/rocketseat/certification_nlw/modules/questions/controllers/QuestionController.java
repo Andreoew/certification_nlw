@@ -13,14 +13,14 @@ import com.rocketseat.certification_nlw.modules.questions.dto.AlternativesResult
 import com.rocketseat.certification_nlw.modules.questions.dto.QuestionResultDTO;
 import com.rocketseat.certification_nlw.modules.questions.entities.AlternativeEntity;
 import com.rocketseat.certification_nlw.modules.questions.entities.QuestionEntity;
-import com.rocketseat.certification_nlw.modules.questions.repositories.QuestionsRepository;
+import com.rocketseat.certification_nlw.modules.questions.repositories.QuestionRepository;
 
 @RestController
 @RequestMapping("/questions")
 public class QuestionController {
 
   @Autowired
-  private QuestionsRepository questionsRepository;
+  private QuestionRepository questionsRepository;
 
   @GetMapping("/technology/{technology}")
   public List<QuestionResultDTO> findByTechnology(@PathVariable String technology) {

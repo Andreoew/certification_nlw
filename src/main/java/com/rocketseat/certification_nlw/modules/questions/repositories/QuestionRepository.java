@@ -7,7 +7,7 @@ import org.springframework.data.jpa.repository.JpaRepository;
 
 import com.rocketseat.certification_nlw.modules.questions.entities.QuestionEntity;
 
-public interface QuestionsRepository extends JpaRepository<QuestionEntity, UUID> {
+public interface QuestionRepository extends JpaRepository<QuestionEntity, UUID> {
 
   List<QuestionEntity> findByTechnology(String technology);
 }
