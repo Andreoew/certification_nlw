@@ -6,7 +6,6 @@ import java.util.UUID;
 
 import org.hibernate.annotations.CreationTimestamp;
 
-import com.fasterxml.jackson.annotation.JsonBackReference;
 import com.fasterxml.jackson.annotation.JsonManagedReference;
 
 import jakarta.persistence.CascadeType;
@@ -45,7 +44,6 @@ public class CertificationStudentEntity {
 
   @ManyToOne
   @JoinColumn(name = "student_id", insertable = false, updatable = false)
-  @JsonBackReference
   private StudentEntity studentEntity;
 
   @OneToMany(cascade = CascadeType.ALL)
